@@ -60,7 +60,8 @@ def create_lab():
     time.sleep(3)
     
     try:    
-        create_start_lab = driver.find_element_by_xpath("//*[text()='Create']")
+#       create_start_lab = driver.find_element_by_xpath("//*[text()='Create']") # This one worked, and still works with Delete text
+        create_start_lab = driver.find_element_by_xpath('//*[@id="tab-course-lab-environment"]/div/div[3]/button')
         create_start_lab.click()
     
         time.sleep(15)
