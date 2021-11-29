@@ -75,14 +75,10 @@ def increase_lifespan_lab():
         time.sleep(3)
     
         increase_lifespan = driver.find_element_by_xpath('//*[@id="tab-course-lab-environment"]/div/table/tr[2]/td[2]/button')
-        increase_lifespan.click()
-        increase_lifespan.click()
-        increase_lifespan.click()
-        increase_lifespan.click()
-        increase_lifespan.click()
-        increase_lifespan.click()
-        increase_lifespan.click()
-        increase_lifespan.click()
+        for i in range(8):
+            increase_lifespan.click()
+            time.sleep(1)
+
     except:
         print("An exception occurred during lifespan extension")
 
